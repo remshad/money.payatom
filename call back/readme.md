@@ -4,6 +4,7 @@
 
 Callback invoke when ever there is any status change in the transaction
 Valid transaction status  are:
+```sh
   Approved
   Declined
   Late Approved
@@ -12,9 +13,10 @@ Valid transaction status  are:
   Refund Initiated
   Refund Completed
   User Timed Out
-
+```
 
 The most famous transaction changes are (but not limited ):
+```sh
   Pending => Approved
   Pending => Declined
   Pending => No Matching Payment for UTR
@@ -23,7 +25,7 @@ The most famous transaction changes are (but not limited ):
   No Matching Payment for UTR => Late Approved
   Declined => Refund Initiated
   Refund Initiated => Refund Completed
-
+```
 
 CallBack landing page has to available at your server some secret path but it should publically avaialble from our white listed IP
 
