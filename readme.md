@@ -8,7 +8,8 @@ capture.
 Merchant on-boarding:
 Merchant needs to provide the following information for onboarding of UAT and production
 environment:
-```Technical list:
+```sh
+Technical list:
 1. IP address (For dynamic IPs please provide range of IP addresses)
 2. Merchant call-back URL to post final transaction status from our end
 ```
@@ -17,11 +18,13 @@ configuration at their end and provide Merchant ID (MID)
 ```sh
 # General Flow:
 1. Merchant will send payment collect request on our API. along with Merchant has to send customer’s
-upi,amount and other transaction details.```
+upi,amount and other transaction details.
+```
 https://github.com/remshad/money.payatom/tree/main/request
 ```sh
 2. On receiving request in correct format, we will share upi payment string which needed for qr generation or intent creation.
-3. Once the customer pay you will get call back data on provide call back url ```
+3. Once the customer pay you will get call back data on provide call back url
+```
 https://github.com/remshad/money.payatom/tree/main/call%20back
 ```sh
 4. You can confirm the payment by calling polling api and update your ssytem about the payment
