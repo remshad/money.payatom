@@ -1,4 +1,4 @@
-##Introduction:
+## Introduction:
 UPI is a set of APIs created by NPCI to facilitate online immediate payments. UPI is expected to
 further propel easy instant payments via mobile. The payments can be both sender (payer) and
 receiver (payee) initiated and can be carried out using virtual payment addresses, Aadhaar
