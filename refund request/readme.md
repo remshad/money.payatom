@@ -10,18 +10,18 @@ url_of_refund_api ( You wil get it from us)
 In the POST JSON body request you will pass following datails
 ```sh 
 pid  // Merchand ID
-order_id  // Unique order id which created while passing payment request
+ref_code  // Unique ref_code which generated while requesting payment
 post_hash  // we will explain how to generate this
 amount // [optional field] refund amount , 
 ```
 
 ### step 1 :> create hash from data
-- Create a md5 hash by appending values of order_id,pid,secret_key
+- Create a md5 hash by appending values of ref_code,pid,secret_key
 - Which help us to get signature of data
 
 ```sh
 #PHP Example:
- $local_hash = md5($order_id . $pid  . $row['secret_key']);
+ $local_hash = md5($ref_code . $pid  . $row['secret_key']);
 ```
 
 ### step 2 :> Encrypt Hash 
@@ -63,7 +63,7 @@ $encoded_hash=base64_encode($encrypted_hash);
 ```sh
 #example request
 {
-  "order_id":  "asas63e1fe596ed8",
+  "ref_code":  "asas63e1fe596ed8",
   "pid":"5345f345345",
   "post_hash":"kvDFE0f/iUuVQ4bZKufsjnUNxs4CN8Hqn6yvApqmoZQZ+h+HUidxTRvv6UxKVBnYwyNA3GamOwGFrtLslvQf20GOcFUz73wqHkvMSZdmUIXRKdbTOWm8YRzsxxXAJqpr",
   "amount":100
