@@ -3,7 +3,7 @@
 ### CallBack Integration 
 
 Callback invoke when ever there is any status change in the transaction
-Valid transaction status  are:
+  Valid transaction status  are:
 ```sh
   Approved
   Declined
