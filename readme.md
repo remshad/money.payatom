@@ -29,3 +29,4 @@ https://github.com/remshad/money.payatom/tree/main/call%20back
 ```sh
 4. You can confirm the payment by calling polling api and update your ssytem about the payment
 ```
+https://github.com/remshad/money.payatom/tree/main/status%20polling
