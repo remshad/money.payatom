@@ -8,9 +8,9 @@ All the request has to be come from white listed IP ( please make sure that your
 ```sh
 Request:
 
-API: you will be shared
+API: You will be provided
 Method: POST
-Format: Json
+Format: JSON
 Encryption: None
 Encoding: Plain text
 ```
