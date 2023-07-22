@@ -12,7 +12,7 @@ url_of_polling_api ( you wil get it)
 In the POST request you will pass following datails
 ```sh 
 pid  // Merchand ID
-order_id  // Unique order id which created while passing payment request
+ref_code  // Unique ref_code  which generated in payment request response
 post_hash  // we will explain how to generate this
 ```
 
@@ -20,7 +20,7 @@ post_hash  // we will explain how to generate this
 create md5 by appending values of order_id,pid,secret_key
 ```sh
 #PHP Example:
- $local_hash = md5($order_id . $pid  . $row['secret_key']);
+ $local_hash = md5($ref_code . $pid  . $row['secret_key']);
 ```
 
 - step 2: Encrypt Hash 
@@ -53,7 +53,7 @@ $encoded_hash=base64_encode($encrypted_hash);
 ```
 - step 4: send a Post request with given url
 
-Send a post request which contain  pid,order_id,post_hash ( as json post body ) to url_of_polling_api and you will get a response after validating data
+Send a post request which contain  pid,ref_code,post_hash ( as json post body ) to url_of_polling_api and you will get a response after validating data
  
 
 ```sh 
@@ -63,8 +63,8 @@ Send a post request which contain  pid,order_id,post_hash ( as json post body ) 
 //
 
 $data['pid']=pid;
-$data['order_id']=order_id;
-$data['post_hash']=order_id;
+$data['ref_code']=ref_code;
+$data['post_hash']=post_hash;
 
 $ch = curl_init();
 $url=you will get api url in the call
