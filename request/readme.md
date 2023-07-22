@@ -8,7 +8,7 @@ All the request has to be come from white listed IP ( please make sure that your
 ```sh
 Request:
 
-API: https://money.payatom.in/api/request.php
+API: you will be shared
 Method: POST
 Format: Json
 Encryption: None
